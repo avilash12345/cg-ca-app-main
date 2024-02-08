@@ -25,7 +25,7 @@ const userschema = new mongoose.Schema(
 userschema.pre("save", function (next) {
   const secret = "abcdefg";
   const hash = createHmac("sha256", secret)
-    .update("I love cupcakes")
+    .update("this.password:hash")
     .digest("hex");
   next();
 });

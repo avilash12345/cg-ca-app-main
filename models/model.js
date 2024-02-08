@@ -4,6 +4,8 @@ const detailschema = new mongoose.Schema(
   {
     slno: {
       type: Number,
+      unique: true,
+      required: true,
     },
     state: {
       type: String,
