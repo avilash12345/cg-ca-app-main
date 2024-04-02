@@ -2,11 +2,6 @@ const mongoose = require("mongoose");
 
 const detailschema = new mongoose.Schema(
   {
-    slno: {
-      type: Number,
-      unique: true,
-      required: true,
-    },
     state: {
       type: String,
       unique: true,

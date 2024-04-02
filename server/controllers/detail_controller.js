@@ -11,10 +11,9 @@ class detail_controller {
   };
   //create new data
   static create_data = async (req, res) => {
-    const { slno, state, capital, chief_minister, governor } = req.body;
+    const { state, capital, chief_minister, governor } = req.body;
     try {
       const doc = await detail_model.create({
-        slno,
         state,
         capital,
         chief_minister,
@@ -26,6 +25,5 @@ class detail_controller {
       console.log(error);
     }
   };
-  
 }
 module.exports = detail_controller;

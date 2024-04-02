@@ -8,11 +8,11 @@ const connecteddb = require("./db/db.js");
 const router = require("./routes/router.js");
 const cookieParser = require("cookie-parser");
 //middleware
+app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/v1/api/", router);
-app.use(cookieParser());
 //database
 connecteddb(dburl);
 //routes
